@@ -1,0 +1,267 @@
+/* Global Styles */
+body {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.5;
+}
+
+.content-wrapper {
+  width: 90%;
+  max-width: 1200px;
+}
+
+
+header,
+main,
+footer {
+  display: flex;
+  justify-content: center;
+}
+
+/* Global Text Styles */
+h1 {
+  font-size: 1.25rem;
+  color: #295981;
+  font-family: 'Salsa', cursive;
+  padding: 50px 0 25px 0;
+  margin: 0;
+}
+
+h2 {
+  width: 100%;
+  margin: 0;
+  font-size: 1.25rem;
+  color: #295981;
+}
+
+h3 {
+  color: #295981;
+}
+
+/* Header Section */
+header .content-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column wrap;
+  border-bottom: 20px dotted #295981;
+  padding: 50px 0;
+}
+
+header .donate-link {
+  background: #a40b28;
+  padding: 10px 30px;
+  color: white;
+  /* add align-self; flex-end; to overwrite align-items: center; from the parent container */
+  border-radius: 5px;
+}
+
+.header-paragraph {
+  padding-bottom: 50px;
+  color: #295981;
+  font-size: 1.25rem;
+}
+
+.about {
+  display: flex;
+  flex-flow: row wrap;
+  background-color: #f3c06d;
+}
+
+.about-text {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+}
+
+.about-text h2,
+.about-text p {
+  width: 80%;
+}
+
+.about-image {
+  width: 100%;
+}
+
+.about-image img {
+  width: 100%;
+  margin-bottom: -6px;
+}
+
+/* End Header Section */
+
+/* Main Section */
+
+main .content-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  padding: 50px 0;
+}
+
+.main-content-wrapper {
+  max-width: 800px;
+}
+
+.main-content-wrapper h2 {
+  font-family: 'Salsa', cursive;
+  font-size: 2.25rem;
+}
+
+.our-programs {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  border-bottom: 15px dotted #295981;
+}
+
+.program {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  width: 100%;
+  padding: 50px 0;
+}
+
+.program-image {
+  width: 100%;
+}
+
+.program-image img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.program .donate-link {
+  background: #a40b28;
+  padding: 10px 30px;
+  color: white;
+  border-radius: 5px;
+  margin-top: 25px;
+}
+
+.fundraising {
+  padding: 50px 0;
+}
+
+aside {
+  display: flex;
+  justify-content: center;
+  background-color: #f0f8ff;
+  padding: 50px 0;
+}
+
+.aside-content-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  align-content: flex-start;
+  width: 80%;
+}
+
+.aside-content-wrapper .social-media {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  padding-left: 0;
+  width: 100%;
+  padding-bottom: 16px;
+  font-size: 1.25rem;
+}
+
+/* End Main Section */
+
+/* Footer Section */
+footer .content-wrapper {
+  padding: 50px 0;
+  display: flex;
+  flex-flow: row wrap;
+  border-top: 20px dotted #295981;
+}
+
+footer h2 {
+  font-family: 'Salsa', cursive;
+  font-size: 2.25rem;
+  padding-bottom: 50px;
+}
+
+.footer-content-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+footer img {
+  width: 100%;
+  object-fit: cover;
+}
+
+/* End Footer Section */
+
+@media (min-width: 768px) {
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  main .content-wrapper {
+    justify-content: space-between;
+    padding-bottom: 0;
+    column-gap: 20px;
+  }
+
+  .main-content-wrapper {
+    /* Add flex-grow: 1; so that the main-content-wrapper fills up any extra space in the parent container. */
+    width: 55%;
+  }
+
+  aside {
+    width: 300px;
+    /* Add flex: 0 0 300px; so that the sidebar doesn't shrink below the optimum width of 300px. */
+    /* Add align-self: flex-start; to overwrite the default align-items' value of stretch. */
+  }
+
+  footer img {
+    width: 25%;
+  }
+
+}
+
+@media (min-width: 1024px) {
+  .about {
+    display: flex;
+    align-items: center;
+  }
+
+  .about-text {
+    width: 50%;
+    /* Change the placement of the text by adding order: 1; */
+  }
+
+  .about-image {
+    width: 50%;
+    /* Change the placement of the image by adding order: 2; */
+  }
+
+}
+
+@media (min-width: 1200px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .main-content-wrapper {
+    padding-bottom: 50px;
+  }
+
+  .our-programs {
+    justify-content: space-between;
+  }
+
+  .program {
+    width: 45%;
+  }
+
+  .program p {
+    /* Add flex-grow: 1; so that the extra space within the card is below the paragraph instead of below the link. */
+  }
+}
