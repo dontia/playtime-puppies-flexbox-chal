@@ -215,9 +215,9 @@ footer img {
   }
 
   aside {
-    width: 300px;
-    /* Add flex: 0 0 300px; so that the sidebar doesn't shrink below the optimum width of 300px. */
-    /* Add align-self: flex-start; to overwrite the default align-items' value of stretch. */
+    /* Original width: 300px; */
+    flex: 0 0 300px;
+    align-self: flex-start;
   }
 
   footer img {
