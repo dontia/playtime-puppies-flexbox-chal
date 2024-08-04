@@ -262,6 +262,6 @@ footer img {
   }
 
   .program p {
-    /* Add flex-grow: 1; so that the extra space within the card is below the paragraph instead of below the link. */
+    flex-grow: 1;
   }
 }
