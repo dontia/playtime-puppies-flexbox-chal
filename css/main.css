@@ -210,7 +210,7 @@ footer img {
   }
 
   .main-content-wrapper {
-    /* Add flex-grow: 1; so that the main-content-wrapper fills up any extra space in the parent container. */
+    flex-grow: 1;
     width: 55%;
   }
 
